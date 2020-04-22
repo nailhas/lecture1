@@ -2,8 +2,45 @@
 <html>
   <head>
     <title>My Web Page!</title>
+    <style>
+      ol > li{
+        color: red;
+      }
+
+      input[type=text]{
+        background-color: lightgray;
+      }
+
+      input[type=number]{
+        background-color: lightyellow;
+      }
+
+      button{
+        width: 200px;
+        height: 50px;
+        font-size: 24px;
+        background-color: green;
+      }
+
+      button:hover{
+        background-color: orange;
+      }
+
+      a::before{
+        content: "\21d2 Click here: ";
+        font-weight: bold;
+      }
+
+      p::selection{
+        color: purple;
+        background-color: yellow;
+      }
+    </style>
+    <!-- In CSS > (greater sign means immmediate child.
+    ::before, ::after and ::selection are pseudoelements, which allow to style the part before or after the element -->
   </head>
   <body>
+    <p>Select here!</p>
     <a href="/users/Nailia/cs50pjs/lecture0/hello.html">Click here!</a>
     <a href="https://google.com">Click here!</a>
 
@@ -38,6 +75,14 @@
       </div>
     </form>
 
+    <button>Click me!</button>
+
+    <ul>
+      <li><a href="#">one link</a></li>
+      <li><a href="#">second link</a></li>
+      <li><a href="#">third link</a></li>
+    </ul>
+
     <ol>
       <li>list item one</li>
       <li>list item two</li>
@@ -47,6 +92,12 @@
       </ul>
       <li>list item three</li>
     </ol>
+
+    <form>
+        <input name="name" type="text" placeholder="First Name">
+        <input name="name" type="text" placeholder="Last Name">
+        <input name="name" type="number" placeholder="Age">
+    </form>
 
     <h2 id="section1">Section 1</h2>
     <p>
